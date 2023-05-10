@@ -10,7 +10,7 @@ import {
 
 import Inicio from './pages-navbar/inicio';
 import RotasBuscar from './pages-navbar/RotasBuscar';
-import Biblioteca from './pages-navbar/RotasBiblioteca';
+import RotasBiblioteca from './pages-navbar/RotasBiblioteca';
 
 const Tab = createBottomTabNavigator();
 
@@ -31,11 +31,7 @@ export default function Rotasnavbar() {
       <Tab.Screen
         name="Buscar"
         component={RotasBuscar}
-        options={{
           tabBarIcon: ({ color, size }) => (
-            <FontAwesome name="search" size={24} color="black" />
-          ),
-        }}
       />
       <Tab.Screen
         name="Biblioteca"
@@ -44,8 +40,4 @@ export default function Rotasnavbar() {
           tabBarIcon: ({ color, size }) => (
             <MaterialIcons name="my-library-music" size={24} color="black" />
           ),
-        }}
       />
-    </Tab.Navigator>
-  );
-}
